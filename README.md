@@ -1,2 +1,2 @@
 # com.d3una.frontend
-d3una angular frontend
+d3una vue frontend
