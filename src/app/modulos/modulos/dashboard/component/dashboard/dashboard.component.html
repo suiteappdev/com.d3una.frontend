@@ -1,0 +1,54 @@
+<div class="container mx-auto">
+    <ngx-slick-carousel class="carousel z-0" #slickModal="slick-carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let curso of cursos" class="slide">
+            <div class="block md:flex items-center bg-gray-50" style="min-height: 19rem;">
+                <div class="relative w-full md:w-2/5 h-full overflow-hidden" style="min-height: 19rem;">
+
+                    <img *ngIf="curso.image" [src]="curso.image.url | noimagen : curso.id :'c'" class="absolute inset-0 w-full h-full object-cover object-center" alt="">
+                    <img *ngIf="!curso.image" [src]="noImagens | noimagen : noImagens : curso.id :'c'" class="absolute inset-0 w-full h-full object-cover object-center" alt="">
+
+                    <div class="absolute inset-0 w-full h-full bg-primary-300 opacity-20"></div>
+                    <div class="absolute inset-0 w-full h-full flex items-center justify-center fill-current text-white">
+                    </div>
+
+                </div>
+                <div class="w-full md:w-3/5 h-full flex items-center bg-gray-50 rounded-lg bg-white">
+                    <div class="p-12 md:pr-24 md:pl-16 md:py-12">
+                        <h1 class="text-4xl font-mont font-bold">
+                            {{curso.nombre_curso}}
+                        </h1>
+                        <p class="text-dark-400 text-xl">
+                            {{curso.descripcion}}
+                        </p>
+                        <a [routerLink]="[ '/curso', curso.id , 'vista', 'previem']" class="flex items-baseline mt-3 text-primary-300 hover:text-primary-500 focus:text-primary-500" href="">
+                            <span>Leer sobre el curso</span>
+                            <span class="text-xs ml-1">&#x279c;</span>
+                        </a>
+                    </div>
+                    <svg class="hidden md:block absolute inset-y-0 h-full w-24 fill-current text-gray-50 -ml-12" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      <polygon points="50,0 100,0 50,100 0,100" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </ngx-slick-carousel>
+</div>
+
+<div class="container mx-auto">
+    <div class="my-10">
+        <h1 class="text-dark-400 font-mont text-2xl font-medium mb-3">Siga aprendiendo, Sus cursos</h1>
+        <app-cursoscomprados></app-cursoscomprados>
+    </div>
+</div>
+
+<div class="mt-10 pb-24">
+
+    <rp-busqueda></rp-busqueda>
+
+    <rp-visita></rp-visita>
+
+    <rp-like></rp-like>
+
+    <rp-compra></rp-compra>
+
+</div>

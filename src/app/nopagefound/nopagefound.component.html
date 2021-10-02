@@ -1,0 +1,27 @@
+<div class="fixed inset-0 items-center flex justify-center px-5 md:px-20">
+    <div class="grid grid-cols-1 md:grid-cols-12 mx-auto">
+        <div class="col-span-5 py-2">
+            <img src="./assets/img/404.png" alt="" class="mx-auto w-64 md:w-auto">
+        </div>
+        <div class="col-span-7 py-2 md:py-32 font-mont">
+            <span class="rounded-lg bg-primary-200 p-3 text-white">
+                Pagina no encontrada
+            </span>
+            <h1 class="text-4xl md:text-8xl font-rale font-bold text-primary-300 my-5">
+                Oh No! Error 404
+
+            </h1>
+            <p class="text-xl md:text-4xl text-gray-600 mb-5">
+                Tal vez GestionPecuaria ha roto esta pagina vuelve a la pagina de inicio
+            </p>
+            <div class="text-center text-lg mt-5 md:mt-10">
+                <a [routerLink]="['/home']" class="rounded-full py-2 px-8 mx-2 bg-primary-300 text-white  shadow-lg hover:shadow-sm font-medium cursor-pointer">
+                    Volver a inicio
+                </a>
+                <a class="rounded-full py-2 px-8 mx-2  bg-gray-100 text-primary-300 shadow-lg hover:shadow-sm font-medium cursor-pointer">
+                    ¿Ayuda?
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

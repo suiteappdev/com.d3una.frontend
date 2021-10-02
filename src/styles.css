@@ -1,0 +1,247 @@
+.progreso_bar {
+    width: 100%;
+}
+
+#contenedor {
+    width: 90%;
+    height: 1.5em;
+    margin: 0 auto;
+    background-color: #B8D6BB;
+    border-radius: 5rem;
+}
+
+#barra {
+    width: 16%;
+    height: 100%;
+    background: #01613E;
+    border-radius: 5rem;
+}
+
+#barra {
+    animation: progreso 2s linear;
+}
+
+#texto:after {
+    animation: porcentaje 2s linear;
+}
+
+@keyframes porcentaje {
+    0% {
+        content: '0%';
+    }
+    16% {
+        content: '16%';
+    }
+    33% {
+        content: '33%';
+    }
+    49% {
+        content: '49%';
+    }
+    66% {
+        content: '66%';
+    }
+    83% {
+        content: '83';
+    }
+    100% {
+        content: '100%';
+    }
+}
+
+.bg-facebook {
+    color: #129AF6;
+    font-size: 20px;
+}
+
+.bg-degrado {
+    background: rgb(1, 97, 62);
+    background: linear-gradient(121deg, rgba(1, 97, 62, 1) 0%, rgba(4, 91, 83, 1) 45%, rgba(0, 122, 32, 1) 100%);
+}
+
+.neon {
+    background: #01613ed3;
+}
+
+.slick-slider {
+    margin: auto;
+}
+
+body .slick-prev,
+body .slick-next {
+    width: 100%;
+    height: 100%;
+    width: 40px;
+    background: rgba(255, 255, 255, 0.2) !important;
+    z-index: 1;
+}
+
+.z-index-1 {
+    z-index: 9;
+    position: relative;
+}
+
+.z-index-2 {
+    z-index: 99;
+}
+
+.z-index-3 {
+    z-index: 999;
+}
+
+.z-index-4 {
+    z-index: 9999;
+    position: relative;
+}
+
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.contenedor::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.contenedor::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.contenedor::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+.contenedor::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+    background-color: #064E3B;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.contenedor::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.contenedor-2::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.contenedor-2::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.contenedor-2::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+.contenedor-2::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.contenedor-2::-webkit-scrollbar-thumb {
+    background-color: #064E3B;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.contenedor-2::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.tab-content {
+    max-height: 0;
+    -webkit-transition: max-height .35s;
+    -o-transition: max-height .35s;
+    transition: max-height .35s;
+}
+
+
+/* :checked - resize to full height */
+
+.tab input:checked~.tab-content {
+    max-height: 100vh;
+}
+
+
+/* Label formatting when open */
+
+.tab input:checked+label {
+    /*@apply text-xl p-5 border-l-2 border-indigo-500 bg-gray-100 text-indigo*/
+    font-size: 1.25rem;
+    /*.text-xl*/
+    padding: 1.25rem;
+    /*.p-5*/
+    border-left-width: 2px;
+    /*.border-l-2*/
+    border-color: #034B45;
+    /*.border-indigo*/
+    background-color: #f8fafc;
+    /*.bg-gray-100 */
+    color: #034B45;
+    /*.text-indigo*/
+}
+
+
+/* Icon */
+
+.tab label::after {
+    float: right;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.2;
+    font-size: 1.25rem;
+    text-align: center;
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+
+
+/* Icon formatting - closed */
+
+.tab input[type=checkbox]+label::after {
+    content: "+";
+    font-weight: bold;
+    /*.font-bold*/
+    border-width: 1px;
+    /*.border*/
+    border-radius: 9999px;
+    /*.rounded-full */
+    border-color: #b8c2cc;
+    /*.border-grey*/
+}
+
+.tab input[type=radio]+label::after {
+    content: "\25BE";
+    font-weight: bold;
+    /*.font-bold*/
+    border-width: 1px;
+    /*.border*/
+    border-radius: 9999px;
+    /*.rounded-full */
+    border-color: #b8c2cc;
+    /*.border-grey*/
+}
+
+
+/* Icon formatting - open */
+
+.tab input[type=checkbox]:checked+label::after {
+    transform: rotate(315deg);
+    background-color: #034B45;
+    /*.bg-indigo*/
+    color: #f8fafc;
+    /*.text-grey-lightest*/
+}
+
+.tab input[type=radio]:checked+label::after {
+    transform: rotateX(180deg);
+    background-color: #034B45;
+    color: #f8fafc;
+}

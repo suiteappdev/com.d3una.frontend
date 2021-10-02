@@ -1,0 +1,59 @@
+<div class="xl:mt-20">
+    <ngx-slick-carousel class="carousel h-auto" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem class="h-screen font-mont slide">
+            <main class="container ">
+                <div class="lg:mx-10 pt-16">
+                    <div class="mt-2 mx-5">
+                        <h1 class="text-aply-400 text-4xl xl:text-7xl">
+                            <span class="font-extrabold"> ¿NECESITAS </span>
+                            <br>
+                            <span class="font-light ml-6"> UN PROFESIONAL?</span>
+                        </h1>
+                        <div class="xl:ml-10 mt-5 text-center">
+                            <button class="py-2 px-8 bg-aply-400 text-white font-medium rounded-full">Solicitar Servicio</button>
+                        </div>
+                    </div>
+                    <div class="xl:-mt-24 xl:ml-10">
+                        <div class="">
+                            <img src="assets/imagen/general/slider-2.png " alt=" " class="">
+                        </div>
+                    </div>
+
+                    hola
+                </div>
+            </main>
+        </div>
+
+        <div ngxSlickItem class="font-mont bg-100">
+            <main class="container mx-auto">
+                <div class="mt-2 text-right">
+                    <h1 class="text-aply-400 text-7xl "><span class="font-extrabold "> ¿OFRECES </span> <br> <span class="font-light ml-6 "> SERVICIOS?</span></h1>
+                    <div class="ml-10 mt-5 ">
+                        <button class="py-2 px-8 bg-aply-400 text-white font-medium rounded-full ">Registrate</button>
+                    </div>
+                </div>
+                <div class="-mt-24 ml-10 ">
+                    <div class="w-9/11">
+                        <img src="assets/imagen/general/slider-1.png " alt=" ">
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- <div ngxSlickItem class="z-10 max-h-screen xl:pt-10 font-mont bg-aply-100">
+            <main class="container mx-auto ">
+                <div class="lg:mx-10 w-full text-right">
+                    <div class="mt-2 ">
+                        <h1 class="text-aply-400 text-7xl "><span class="font-extrabold "> ¿OFRECES </span> <br> <span class="font-light ml-6 "> SERVICIOS?</span></h1>
+                        <div class="ml-10 mt-5 ">
+                            <button class="py-2 px-8 bg-aply-400 text-white font-medium rounded-full ">Registrate</button>
+                        </div>
+                    </div>
+                    <div class="-mt-20 w-9/12">
+                        <img src="assets/imagen/general/slider-1.png " alt=" ">
+                    </div>
+                </div>
+            </main>
+        </div> -->
+
+    </ngx-slick-carousel>
+</div>

@@ -1,0 +1,13 @@
+.bg-facebook {
+    color: #129AF6;
+    font-size: 20px;
+}
+
+.bg-degrado {
+    background: rgb(1, 97, 62);
+    background: linear-gradient(121deg, rgba(1, 97, 62, 1) 0%, rgba(4, 91, 83, 1) 45%, rgba(0, 122, 32, 1) 100%);
+}
+
+.neon {
+    background: #01613ed3;
+}

@@ -1,0 +1,173 @@
+<!-- <app-header></app-header> -->
+<div>
+    login word!
+</div>
+
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <img src="{{ slide.img }}" alt="" width="100%">
+    </div>
+</ngx-slick-carousel>
+
+<button (click)="addSlide()">Add</button>
+<button (click)="removeSlide()">Remove</button>
+<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+<button (click)="slickModal.unslick()">unslick</button>
+
+
+<!-- <div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true"> -->
+<!-- <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"> -->
+<!--
+        Background overlay, show/hide based on modal state.
+  
+        Entering: "ease-out duration-300"
+          From: "opacity-0"
+          To: "opacity-100"
+        Leaving: "ease-in duration-200"
+          From: "opacity-100"
+          To: "opacity-0"
+      -->
+<!-- <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div> -->
+
+<!-- This element is to trick the browser into centering the modal contents. -->
+<!-- <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span> -->
+
+<!--
+        Modal panel, show/hide based on modal state.
+  
+        Entering: "ease-out duration-300"
+          From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          To: "opacity-100 translate-y-0 sm:scale-100"
+        Leaving: "ease-in duration-200"
+          From: "opacity-100 translate-y-0 sm:scale-100"
+          To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      -->
+<!-- <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                    <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10"> -->
+<!-- Heroicon name: outline/exclamation -->
+<!-- <svg class="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+                    </div>
+                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                            Deactivate account
+                        </h3>
+                        <div class="mt-2">
+                            <p class="text-sm text-gray-500">
+                                Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
+            Deactivate
+          </button>
+                <button type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+            Cancel
+          </button>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- <div class="neon sm:flex sm:justify-center">
+    <div class="modal-container max-w-lg">
+        <div class="bg-degrado rounded-t-lg h-8 justify-center"></div>
+        <div class="w-4/5 mx-auto pt-3 pb-10 font-nuni">
+
+            <a [routerLink]="['/home']" class="flex justify-center">
+                <img src="./assets/img/logo/log2-06.png" alt="" class="h-24 sm:h-36">
+            </a>
+
+            <form class="grid grid-cols-1 md:grid-cols-12 gap-2  pt-5" id="loginForm" [formGroup]="loginForm" (ngSubmit)="login()" autocomplete="off">
+
+                <div class="col-span-12 mb-2">
+                    <label class="label-1">
+                        Correo                        
+                    </label>
+                    <input type="email" class="sm:text-sm input-1" placeholder="Email" formControlName="email">
+                    <div class="text-danger">
+                        <p *ngIf="campoNoValido('email')">
+                            El email es obligatorio y tiene que ser valido
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-span-12">
+                    <label for="" class="label-1">
+                        Contraseña
+                    </label>
+                    <input type="password" class="sm:text-sm input-1" placeholder="Contraseña" formControlName="password">
+
+                    <div class="col-span-12">
+                        <div class="text-danger">
+                            <p *ngIf="campoNoValido('password')">
+                                La contraseña es obligatoria
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex items-start mt-2">
+                    <div class="flex items-center h-5">
+                        <input id="comments" type="checkbox" class="h-4 w-4 rounded-lg border-0 bg-gray-700 text-primary-300" formControlName="remember">
+                    </div>
+                    <div class="ml-3 text-md">
+                        <label for="comments" class="font-bold text-gray-700">
+                            Recuerdame
+                        </label>
+                    </div>
+                </div>
+
+
+
+                <div class="col-span-12 text-center">
+                    <a [routerLink]="['/recovery']" class="font-bold hover:underline">
+                        ¿Olvidastes tu contraseña?
+                    </a>
+                </div>
+
+                <div class="col-span-12">
+                    <button class="rounded-full py-2 px-8 font-bold bg-primary-300 text-white shadow-lg hover:shadow-md w-full focus:outline-none">Entrar</button>
+                </div>
+
+            </form>
+
+            <div class="grid grid-cols-12 gap-2 px-4 pt-5">
+
+                <div class="col-span-12 divide-y-2 divide-dashed md:divide-solid">
+                    <div class="relative -ml-4 top-3 text-center">
+                        <p class="w-5 bg-white mx-auto text-gray-700 font-bold text-md">ó</p>
+                    </div>
+                    <div class="pt-2 block sm:flex justify-between">
+                        <button (click)="logingoogle()" class="w-full rounded-full px-2 py-2 font-bold bg-gray-200 border-2 flex justify-center mb-4">
+                            <img src="./assets/img/logo/google.png" alt="" srcset="" class="w-5 h-auto mr-1"> 
+                            Con Google
+                        </button>
+                        <button class="w-full rounded-full px-7 py-2 font-bold bg-gray-200 border-2">
+                            <i class="icofont-facebook bg-facebook"></i> 
+                            Con Facebook
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-span-12 text-center mt-5">
+                    ¿No tienes cuenta?
+                    <a routerLink="/register" class="font-bold hover:underline">
+                        Registrate.
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="bg-degrado rounded-b-lg h-8"></div>
+
+    </div>
+</div> -->
