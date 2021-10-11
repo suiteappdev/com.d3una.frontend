@@ -12,9 +12,6 @@ import { RegisterComponent } from './components/register/register.component';
 import { RecoveryComponent } from './components/recovery/recovery.component';
 import { ResetComponent } from './components/reset/reset.component';
 import { VerificacionComponent } from './components/verificacion/verificacion.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
-
-// import { SharedModule } from 'src/app/shared.component/shared.module';
 
 
 @NgModule({
@@ -30,12 +27,10 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     LoginComponent,
   ],
   imports: [
-    // SharedModule, 
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
-    SlickCarouselModule
   ]
 })
 export class AuthModule { }

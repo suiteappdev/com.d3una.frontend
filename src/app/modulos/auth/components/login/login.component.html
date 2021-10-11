@@ -1,18 +1,50 @@
-<!-- <app-header></app-header> -->
-<div>
-    login word!
+<div class="w-full">
+    <div class="flex flex-col items-center justify-center content-center h-screen">
+
+        <div class="">
+            <img src="assets/imagen/logo/logo-tras.png" alt="" class="w-40">
+        </div>
+
+        <h3 class="font-mont font-bold text-2xl text-dark-300">Iniciar sesión</h3>
+
+        <div class="mt-20 w-3/5	 xl:w-1/4">
+
+            <form class="grid gap-6" [formGroup]="loginForm" (ngSubmit)="login()" autocomplete="off">
+
+                <div class="flex flex-col">
+                    <label for="Correo" class="font-bold text-base text-dark-300">Correo</label>
+                    <input type="text" class="shadow-xl bg-white rounded-2xl px-3 py-2" formControlName="email">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="" class="font-bold text-base text-dark-300">Contraseña</label>
+                    <input type="password" class="shadow-xl bg-white rounded-2xl px-3 py-2" formControlName="password">
+                </div>
+
+                <div>
+                    <button class="input-1 bg-aply-600 w-full text-white hover:shadow-inner">
+                        Iniciar sesión
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- <div>
+                <button class="mt-4 input-1 bg-white w-full text-dark-300  hover:shadow-inner">
+                    Google 
+                </button>
+            </div> -->
+        </div>
+
+    </div>
+
+
 </div>
 
-<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
-    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <img src="{{ slide.img }}" alt="" width="100%">
-    </div>
-</ngx-slick-carousel>
 
-<button (click)="addSlide()">Add</button>
-<button (click)="removeSlide()">Remove</button>
-<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-<button (click)="slickModal.unslick()">unslick</button>
+
+
+
 
 
 <!-- <div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true"> -->

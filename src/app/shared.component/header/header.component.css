@@ -1,0 +1,13 @@
+.items-menu {
+    display: block;
+    cursor: pointer;
+    padding: 1rem 1.25rem;
+}
+
+.items-menu:hover {
+    background-color: #eeeeee;
+}
+
+.items-menu:hover>div img {
+    filter: grayscale(100%);
+}

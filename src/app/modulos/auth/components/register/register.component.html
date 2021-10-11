@@ -1,3 +1,18 @@
+<div class="flex flex-col items-center justify-center content-center h-screen">
+    <form [formGroup]="registerForm" (ngSubmit)="registroCreated()" autocomplete="off">
+
+        <label>email</label> <br>
+        <input type="text" formControlName="email"> <br>
+        <label>password</label> <br>
+        <input type="password" formControlName="password"> <br>
+        <label>name</label> <br>
+        <input type="text" formControlName="name"> <br>
+
+        <input type="submit" value="registrar">
+
+    </form>
+</div>
+
 <!-- <div class="">
     <div class="modal-container max-w-lg md:max-w-5xl">
         <div class="bg-degrado rounded-t-lg h-8"></div>

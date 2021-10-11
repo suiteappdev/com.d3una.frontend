@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UsuarioService } from 'src/app/core/services/usuario.service';
 import Swal from 'sweetalert2'
 
 // Servicie import 
@@ -15,44 +16,46 @@ export class RegisterComponent  {
   
 
 
-  // public formSubmitted = false;
+  public formSubmitted = false;
   
-  // public registerForm = this.fb.group(
-  //   {
-  //     Nombre: ['', [ Validators.required, Validators.minLength(3) ]],
-  //     Apellido: ['', [ Validators.required, Validators.minLength(3) ]],
-  //     email: ['', [ Validators.required, Validators.email ]],
-  //     password: ['', [ Validators.required, Validators.minLength(8) ]],
-  //     password2: ['', [ Validators.required, Validators.minLength(8), this.passwordsAreEquals ]],
-  //     termino: [ false , [ Validators.required ]],
-  //   }
-  // );
+  public registerForm = this.fb.group(
+    {
+      name: ['', [ Validators.required, Validators.minLength(3) ]],
+      email: ['', [ Validators.required, Validators.email ]],
+      password: ['', [ Validators.required, Validators.minLength(8) ]],
+      // password2: ['', [ Validators.required, Validators.minLength(8), this.passwordsAreEquals ]],
+      // termino: [ false , [ Validators.required ]],
+    }
+  );
 
 
   constructor(
-    // private router: Router, 
-    // private fb: FormBuilder,
-    // private usuarioService: UsuarioService
+    private router: Router, 
+    private fb: FormBuilder,
+    private usuarioService: UsuarioService
   ) {}
 
 
-  crearUsuario() {
+  registroCreated() {
     
-    // this.formSubmitted = true;
+    this.formSubmitted = true;
 
-    // if (this.registerForm.invalid) {
-    //   return;
-    // }
+    if (this.registerForm.invalid) {
+      return;
+    }
 
-    // //Realizar el posteo
-    // this.usuarioService.crearUsuario(this.registerForm.value)
+    // // //Realizar el posteo
+    // this.usuarioService.registroUsuario(this.registerForm.value)
     //   .subscribe( resp => {
 
-    //     if(resp.success){
-    //       this.router.navigateByUrl('/dashboard');
-    //     }else{
-    //       Swal.fire('Error', resp.error, 'error');
-    //     }
+    //     console.log(resp);
+        
+    //     // if (resp.success) {
+    //     //   Swal.fire('Listo', 'dentro del sistema', 'success');
+    //     //   // this.router.navigateByUrl('/dashboard');
+    //     // }else{
+    //     //   Swal.fire('Error', resp.error, 'error');
+    //     // }
         
     // }, (err) => {
     //     Swal.fire('Error', err, 'error');

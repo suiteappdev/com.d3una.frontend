@@ -245,3 +245,22 @@ body .slick-next {
     background-color: #034B45;
     color: #f8fafc;
 }
+
+.bg-aply-600 {
+    background-color: #2784FE;
+}
+
+.text-aply-600 {
+    color: #2784FE;
+}
+
+.input-1 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-radius: 1rem;
+    --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}

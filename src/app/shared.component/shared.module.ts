@@ -13,11 +13,6 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { SharedPipesModule } from '../shared.pipes/shared.pipes.module';
 import { AuthModule } from '../modulos/auth/auth.module';
 import { RouterModule } from '@angular/router';
-// import { MenuCategoriaComponent } from '../modulos/modulos/components/menuCategoria/menuCategoria.component';
-// import { CanastaComponent } from '../modulos/modulos/components/canasta/canasta.component';
-// import { MenuPerfilComponent } from '../modulos/modulos/components/menuPerfil/menuPerfil.component';
-// import { AlertsComponent } from '../modulos/modulos/components/alerts/alerts.component';
-
 
 
 @NgModule({
@@ -25,19 +20,11 @@ import { RouterModule } from '@angular/router';
     HeaderComponent,
     FooterComponent,
     BreadcrumbsComponent,
-    // MenuCategoriaComponent,
-    // CanastaComponent,
-    // MenuPerfilComponent,
-    // AlertsComponent
   ],
   exports:[
     HeaderComponent,
     FooterComponent,
     BreadcrumbsComponent,
-    // MenuCategoriaComponent,
-    // CanastaComponent,
-    // MenuPerfilComponent,
-    // AlertsComponent
   ],
   imports: [
     SharedPipesModule.forRoot(),

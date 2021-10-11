@@ -12,8 +12,6 @@ import { AppComponent } from './app.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { ModulosModule } from './modulos/modulos/modulos.module';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { SharedModule } from './shared.component/shared.module';
-
 
 //Pipes
 
@@ -25,7 +23,6 @@ import { SharedModule } from './shared.component/shared.module';
   ],
   imports: [
     BrowserModule,
-    SharedModule,
     AppRoutingModule,
     ModulosModule,
     CommonModule,
